@@ -1,0 +1,28 @@
+/* scroll bar start */
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: #fff;
+    margin: 0 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #BEBEBE;
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #BEBEBE;
+}
+
+/* scroll bar end */
+
+body {
+    overflow-x: hidden;
+}

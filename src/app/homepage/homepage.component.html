@@ -1,0 +1,72 @@
+<section role="searchbox" class="search-container">
+    <input type="text" #Search class="search-box mt-2" placeholder="Search by name,email or role"
+    (input)="searchUser(Search.value)">
+</section>
+
+<ng-container *ngIf= "!showErrorMessage;else showError">
+    <section role="table">
+        <div class="mx-2">
+            <table id="users" class="table table-responsive">
+                <tr>
+                    <th class="width-checkbox">
+                        <input type="checkbox" id="selectAll" (click)="selectAllRows($event)">
+                    </th>
+                    <th>
+                        {{column1}}
+                    </th>
+                    <th>
+                        {{column2}}
+                    </th>
+                    <th>
+                        {{column3}}
+                    </th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+        
+                <tr *ngFor="let user of allUsers | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; let i = index">
+                    <td><input type="checkbox" id="check{{i}}" (click)="selectRows($event,i)"></td>
+                    <td>
+                        <span *ngIf="user.showNormal">{{user.name}}</span>
+                        <input *ngIf="user.showInput" id="name{{i}}" name="name{{i}}" type="text" [(ngModel)]="user.name"
+                            class="form-control" value="{{user.name}}">
+                    </td>
+                    <td>
+                        <span *ngIf="user.showNormal">{{user.email}}</span>
+                        <input *ngIf="user.showInput" id="email{{i}}" name="email{{i}}" type="text" [(ngModel)]="user.email"
+                            class="form-control" value="{{user.email}}">
+                    </td>
+                    <td>
+                        <span *ngIf="user.showNormal">{{user.role}}</span>
+                        <input *ngIf="user.showInput" id="role{{i}}" name="role{{i}}" type="text" [(ngModel)]="user.role"
+                            class="form-control" value="{{user.role}}">
+                    </td>
+                    <td>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true" id="pencil{{i}}"
+                            (click)="enableInlineEdit(user,i)"></i>
+                        <i class="fa fa-check check-icon-display" aria-hidden="true" id="checkicon{{i}}"
+                            (click)="saveAfterEdit(user,i)"></i>
+                        <i class="fa fa-trash pl-2" aria-hidden="true" (click)="deleteRow(i)"></i>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+</ng-container>
+
+<ng-template #showError>
+    <div class="error-message text-center">
+        {{errorMessage}}
+    </div>
+</ng-template>
+
+<section class="row">
+    <div class="col-auto">
+        <button class="ml-4 mt-1 btn-delete" (click)="deleteSelectedRows()">Delete Selected</button>
+    </div>
+    <div class="col">
+        <ngb-pagination [collectionSize]="datalength" [(page)]="page" [rotate]="true" [ellipses]="false"
+            [boundaryLinks]="true"></ngb-pagination>
+    </div>
+</section>

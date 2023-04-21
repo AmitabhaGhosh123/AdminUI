@@ -1,0 +1,141 @@
+:root {
+    --page-link-border-color: #dee2e6;
+}
+
+.search-box {
+    --search-border-color: #ccc;
+    border: .094rem solid var(--search-border-color);
+    border-radius: .188rem;
+    width: 100%;
+}
+
+input:focus-visible {
+    outline: none;
+}
+
+.width-checkbox {
+    width: 2%;
+}
+
+.btn-delete {
+    border-radius: .625rem;
+    background: var(--red);
+    border: none;
+    cursor: default;
+    color: var(--white);
+    line-height: 2rem;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* table styles start */
+#users {
+    font-family: Arial;
+}
+
+#users td, #users th {
+    --light-gray: #ddd;
+    border: .063rem solid var(--light-gray);
+    padding: .5rem;
+}
+
+#users th {
+    --header-color: #04AA6D;
+    padding-top: .075rem;
+    padding-bottom: .075rem;
+    text-align: left;
+    background-color: var(--header-color);
+    color: var(--white);
+}
+/* table styles end */
+
+
+/* pagination start */
+
+.page-link:hover {
+    --page-link-hover-color: #0056b3;
+    --page-link-hover-background-color: #e9ecef;
+    z-index: 2;
+    color: var(--page-link-hover-color);
+    text-decoration: none;
+    background-color: var(--page-link-hover-background-color);
+    border-color: var(--page-link-border-color,#dee2e6);
+}
+
+::ng-deep .page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    margin-left: .25rem;
+    line-height: 1.25rem;
+    color: var(--blue);
+    background-color: var(--white);
+    border: .063rem solid var(--page-link-border-color,#dee2e6);
+}
+
+::ng-deep .page-item.active .page-link {
+    z-index: 1;
+    color: var(--white);
+    background-color: var(--blue);
+    border-color: var(--blue);
+    border-radius: 1.25rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: .063rem;
+    height: .063rem;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+::ng-deep .page-item.disabled .page-link {
+    --page-item-disabled: #6c757d;
+    color: var(--page-item-disabled);
+    pointer-events: none;
+    cursor: auto;
+    background-color: var(--white);
+    border-color: var(--page-link-border-color,#dee2e6);
+}
+
+::ng-deep .pagination {
+    display: flex;
+    padding-left: 1.188rem;
+    list-style: none;
+    border-radius: .25rem;
+    padding-top: .25rem;
+}
+
+@media(min-width:992px) {
+    ::ng-deep .pagination {
+        padding-left: 0;
+    }
+}
+
+::ng-deep .page-link:focus {
+    box-shadow: none;
+}
+
+/* pagination end */
+
+.selected {
+    --row-selected-background-color: #f2f2f2;
+    background-color: var(--row-selected-background-color);
+}
+
+.error-message {
+    color: var(--red);
+}
+
+.search-container {
+    padding: .5rem;
+}
+
+.check-icon-display {
+    visibility: hidden;
+}
