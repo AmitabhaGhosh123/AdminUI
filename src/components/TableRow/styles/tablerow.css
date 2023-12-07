@@ -1,0 +1,49 @@
+.delete-icon {
+    color: #1f514e;
+}
+
+.icon {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+/* table styles start */
+
+.users td, .users th {
+    --light-gray: #ddd;
+    border: .063rem solid var(--light-gray);
+    padding: .5rem;
+  }
+  
+.users thead th {
+    --header-color: #04AA6D;
+    padding-top: .075rem;
+    padding-bottom: .075rem;
+    text-align: left;
+    background-color: var(--header-color);
+    color: var(--white);
+}
+
+.selectall-checkbox-header {
+    width: 2%;
+}
+
+.btn-delete {
+    border-radius: .625rem;
+    background: var(--red);
+    border: none;
+    cursor: default;
+    color: var(--white);
+    line-height: 2rem;
+}
+/* table styles end */ 
+
+.selected {
+    --row-selected-background-color: #f2f2f2;
+    background-color: var(--row-selected-background-color);
+}
+
+input[type="text"]:focus {
+    border-color: rgb(206, 212, 218);
+    box-shadow: none;
+}
