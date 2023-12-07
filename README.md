@@ -1,38 +1,70 @@
-# AdminUI
+# Getting Started with Create React App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Instructions on how to use the application.
+## Available Scripts
 
-1. To select any row , user has to select the checknox for that particular row and click the delete icon for deleting that specific row.
-2. For deleting multiple rows , user can select multiple checkboxes and click "Delete Selected" button to delete multiple rows. For deleting all rows in a particular
-   page, user can select the checkbox on the top left corner which appears on the header of the table and click on "Delete Selected" button. Also a particular
-   record can be deleted by clicking on delete icon present next to the edit icon for that row.
-3. For editing a particular record, user can click on edit icon for any row. Once the icon is clicked, a textbox will appear for all the three columns
-   where the necessary editing can be performed. Also a tick icon will come instead of edit icon. Once user has done editing , he/she can click on the tick icon
-   to save the changes.Once saved, the edit icon will be visible again.
-4. User can also search by name,email or role in the above search bar. Based on the search, the records will be filtered out and the table will be paged into 
-   different page numbers.
-5. By default ten records will appear on each page.
+In the project directory, you can run:
 
-Note: Angular tests for service are written in the admin service file and for the component methods, tests are written in the homepage component. 
+### `npm start`
 
-If any error occurs in fetching the list of users, then relevant error messages are shown in the UI.
-For 404 error, then "No records found" message is shown.
-For any other server error, "Failed to load data" message is shown.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Build
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### `npm test`
 
-## Running unit tests
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### `npm run build`
 
-## Running end-to-end tests
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## Further help
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
